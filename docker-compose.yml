@@ -12,8 +12,8 @@ services:
     env_file:
       - ./backend/.env.docker
     depends_on:
-      - db:
-          condition: service_started
+      db:
+        condition: service_started
     volumes:
       - ./backend/static:/app/static
       - ./backend/media:/app/media
@@ -29,8 +29,8 @@ services:
         VITE_SERVER_BASE_URL: "/api/v1"
     
     depends_on:
-      - backend:
-          condition: service_started 
+      backend:
+        condition: service_started 
 
   nginx:
     image: nginx:alpine
