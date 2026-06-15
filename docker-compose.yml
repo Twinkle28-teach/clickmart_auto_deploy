@@ -40,6 +40,8 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./backend/media:/media
       - ./backend/static:/static
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
     depends_on:
       frontend:
         condition: service_started
