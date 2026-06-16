@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG")
 
-ALLOWED_HOSTS = ["172.105.33.32","backend","djangoclickmart.shop",]
+ALLOWED_HOSTS = ["172.105.33.32","backend","djangoclickmart.shop","www.djangoclickmart.shop",]
 
 
 # Application definition
@@ -167,5 +167,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://172.105.33.32:5173',
     'http://djangoclickmart.shop',
     'https://djangoclickmart.shop',
+    'http://www.djangoclickmart.shop',
+    'https://www.djangoclickmart.shop',
 ]
 
